@@ -19,18 +19,19 @@ const App = () => {
     boost: 3,
   });
   const [turboBg, setTurboBg] = useState("bg-blue-500");
+
   return (
     <>
       <main className="lg:hidden w-screen p-8 container h-dvh bg-[#0a0d10] text-white overflow-scroll">
         <Menu />
 
         <Routes>
-          <Route path="/ref" element={<Ref />}></Route>
-          <Route path="/task" element={<Task />}></Route>
+          <Route path="/ref" element={<Ref />} />
+          <Route path="/task" element={<Task />} />
           <Route
             path="/"
             element={<Home earn={earn} setEarn={(nEarn) => setEarn(nEarn)} />}
-          ></Route>
+          />
           <Route
             path="/boost"
             element={
@@ -41,8 +42,8 @@ const App = () => {
                 setTurboBg={(bg) => setTurboBg(bg)}
               />
             }
-          ></Route>
-          <Route path="/stats" element={<Stats />}></Route>
+          />
+          <Route path="/stats" element={<Stats />} />
         </Routes>
       </main>
       <div className="hidden lg:flex w-screen h-dvh justify-center items-center font-bold bg-[#0a0d10] text-white">
